@@ -1,0 +1,28 @@
+{
+  "name": "tcstech/ws-helper",
+  "description": "Bundle of WSHelper classes",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Kingma"
+    },
+    {
+      "name": "Shawn Cook",
+      "email": "Shawn@itbytez.com"
+    },
+    {
+      "name": "Jared Loosli",
+      "email": "jared.loosli@tcstire.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "TCSTech\\": "lib/"
+    }
+  }
+}
