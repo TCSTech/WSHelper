@@ -88,11 +88,12 @@ class WSHelper {
 	/**
 	 * Checks if the current WSDL is up-to-date, regenerates if necessary and outputs the WSDL
 	 * @return void
+	 * @throws \Exception
 	 */
 	public function showWSDL() {
 		//check if it's a legal webservice class
 		if ( ! in_array( $this->name, $this->classNameArr ) ) {
-			throw new Exception( "No valid webservice class." );
+			throw new \Exception( "No valid webservice class." );
 		}
 
 		//@TODO: nog een mooie oplossing voor het cachen zoeken
@@ -135,7 +136,7 @@ class WSHelper {
 	private function handleRequest() {
 		//check if it's a legal webservice class
 		if ( ! in_array( $this->name, $this->classNameArr ) ) {
-			throw new Exception( "No valid webservice class." );
+			throw new \Exception( "No valid webservice class." );
 		}
 
 		//check cache
@@ -146,7 +147,7 @@ class WSHelper {
 		$options = Array( 'actor' => $this->actor, 'classmap' => $this->structureMap );
 
 		header( "Content-type: text/xml" );
-		$this->server = new SoapServer( $this->wsdlfile, $options );
+		$this->server = new \SoapServer( $this->wsdlfile, $options );
 		$this->server->setClass( $this->name );
 		$this->server->setPersistence( $this->persistence );
 

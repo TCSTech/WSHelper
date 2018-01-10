@@ -142,7 +142,7 @@ class IPReflectionCommentParser {
 				$this->obj->globals[] = $tagArr[1];
 				break;
 			case 'param':
-				$o                   = new stdClass();
+				$o                   = new \stdClass();
 				$o->type             = trim( $tagArr[1] );
 				$o->comment          = implode( " ", $tagArr );
 				$this->obj->params[] = $o;

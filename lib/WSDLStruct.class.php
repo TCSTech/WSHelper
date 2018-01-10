@@ -80,10 +80,10 @@ class WSDLStruct {
 	 */
 	public function __construct( $tns, $url, $type = SOAP_RPC, $use = SOAP_ENCODED ) {
 		if ( $type != SOAP_RPC && $type != SOAP_DOCUMENT ) {
-			throw new Exception( "Webservice type parameter should be either SOAP_RPC or SOAP_DOCUMENT" );
+			throw new \Exception( "Webservice type parameter should be either SOAP_RPC or SOAP_DOCUMENT" );
 		}
 		if ( $use != SOAP_ENCODED && $use != SOAP_LITERAL ) {
-			throw new Exception( "Webservice use parameter should be either SOAP_ENCODED or SOAP_LITERAL" );
+			throw new \Exception( "Webservice use parameter should be either SOAP_ENCODED or SOAP_LITERAL" );
 		}
 
 		$this->use           = $use;
