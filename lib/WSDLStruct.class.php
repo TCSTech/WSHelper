@@ -90,7 +90,7 @@ class WSDLStruct {
 		$this->binding_style = $type;
 		$this->tns           = $tns;
 		$this->url           = $url;
-		$this->doc           = new domDocument();
+		$this->doc           = new \DomDocument();
 		$this->definitions   = $this->addElement( "wsdl:definitions", $this->doc );
 
 		$this->typesTag  = $this->addElement( "wsdl:types", $this->definitions );
